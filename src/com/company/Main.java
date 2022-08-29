@@ -1,8 +1,35 @@
 package com.company;
 
+import java.util.Calendar;
+
 public class Main {
+    class  F extends Number{
+
+        @Override
+        public int intValue() {
+            return 0;
+        }
+
+        @Override
+        public long longValue() {
+            return 0;
+        }
+
+        @Override
+        public float floatValue() {
+            return 0;
+        }
+
+        @Override
+        public double doubleValue() {
+            return 0;
+        }
+    }
+
+
 
     public static void main(String[] args) {
+
 	// Generics (обопщения)
         Dog<String,Float> d1=new Dog<>();// <> справа не обязательны
         d1.id="asd";
@@ -13,6 +40,8 @@ public class Main {
         d2.setGender((short)7);
         Dog d3 = new Dog();
         d2.<String>haw("hello");// <>  слева не обязательны
+        Dog<Integer, Long> d4= new Dog<>();
+
 
         // если тип псевдонима явно не указан  при создании объекта , то будет указываться класс Object
 /*Dog d1=new Dog();
